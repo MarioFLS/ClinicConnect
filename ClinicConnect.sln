@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.002.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClinicConnect.WebAPI", "ClinicConnect.WebAPI\ClinicConnect.WebAPI.csproj", "{FB739313-FBD8-48B0-A059-0EF86DC5F5CE}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClinicConnect.Domain", "ClinicConnect.Domain\ClinicConnect.Domain.csproj", "{E11CAC8F-AAEB-44B1-AA45-4E60B1E3DD37}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClinicConnect.Application", "ClinicConnect.Application\ClinicConnect.Application.csproj", "{88F3906F-7BA5-4C42-8643-34FCCE71E697}"
@@ -13,16 +11,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClinicConnect.Infra.Data", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClinicConnect.Infra.IoC", "ClinicConnect.Infra.IoC\ClinicConnect.Infra.IoC.csproj", "{0FCADA34-179B-430B-8E6B-72F8A73CC0CD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClinicConnect.Web.API", "ClinicConnect.Web.API\ClinicConnect.Web.API.csproj", "{90AAC209-A978-40B0-BC7B-429AA736996F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{FB739313-FBD8-48B0-A059-0EF86DC5F5CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FB739313-FBD8-48B0-A059-0EF86DC5F5CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FB739313-FBD8-48B0-A059-0EF86DC5F5CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FB739313-FBD8-48B0-A059-0EF86DC5F5CE}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E11CAC8F-AAEB-44B1-AA45-4E60B1E3DD37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E11CAC8F-AAEB-44B1-AA45-4E60B1E3DD37}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E11CAC8F-AAEB-44B1-AA45-4E60B1E3DD37}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -39,6 +35,10 @@ Global
 		{0FCADA34-179B-430B-8E6B-72F8A73CC0CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0FCADA34-179B-430B-8E6B-72F8A73CC0CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0FCADA34-179B-430B-8E6B-72F8A73CC0CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90AAC209-A978-40B0-BC7B-429AA736996F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90AAC209-A978-40B0-BC7B-429AA736996F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90AAC209-A978-40B0-BC7B-429AA736996F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90AAC209-A978-40B0-BC7B-429AA736996F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,6 +1,6 @@
 namespace ClinicConnect.Domain.Entites
 {
-    public class BaseEntity
+    abstract public class BaseEntity
     {
         public Guid Id { get; private set; }
     }
