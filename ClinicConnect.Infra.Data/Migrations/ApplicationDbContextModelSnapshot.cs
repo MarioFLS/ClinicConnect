@@ -46,7 +46,7 @@ namespace ClinicConnect.Infra.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Clinics");
+                    b.ToTable("Clinics", (string)null);
                 });
 
             modelBuilder.Entity("ClinicConnect.Domain.Entites.Doctor", b =>
@@ -73,7 +73,7 @@ namespace ClinicConnect.Infra.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Doctors");
+                    b.ToTable("Doctors", (string)null);
                 });
 
             modelBuilder.Entity("ClinicConnect.Domain.Entites.Patient", b =>
@@ -102,7 +102,7 @@ namespace ClinicConnect.Infra.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Patients");
+                    b.ToTable("Patients", (string)null);
                 });
 #pragma warning restore 612, 618
         }
