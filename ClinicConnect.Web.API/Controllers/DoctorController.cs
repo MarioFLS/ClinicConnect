@@ -1,6 +1,5 @@
 using ClinicConnect.Application;
 using ClinicConnect.Application.DTOs;
-using ClinicConnect.Domain.Entites;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ClinicConnect.Web.API.Controllers

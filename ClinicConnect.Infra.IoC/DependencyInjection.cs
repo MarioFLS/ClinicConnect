@@ -1,4 +1,5 @@
 using ClinicConnect.Application;
+using ClinicConnect.Application.Interfaces;
 using ClinicConnect.Application.Mappings;
 using ClinicConnect.Application.Services;
 using ClinicConnect.Domain.Interfaces.Repository;
@@ -21,6 +22,9 @@ namespace ClinicConnect.Infra.IoC
 
             services.AddScoped<IDoctorRepository, DoctorRepository>();
             services.AddScoped<IDoctorService, DoctorService>();
+
+            services.AddScoped<IClinicRepository, ClinicRepository>();
+            services.AddScoped<IClinicService, ClinicService>();
 
             services.AddAutoMapper(typeof(DtoMappingProfile));
             var myhandlers = AppDomain.CurrentDomain.Load("ClinicConnect.Application");
