@@ -8,7 +8,7 @@ namespace ClinicConnect.Application.Mappings
     {
         public DtoMappingProfile()
         {
-            CreateMap<DoctorDTO, Doctor>();
+            CreateMap<Doctor, DoctorDTO>();
         }
     }
 }

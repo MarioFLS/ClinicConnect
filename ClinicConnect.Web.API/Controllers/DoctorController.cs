@@ -1,9 +1,6 @@
-using AutoMapper;
 using ClinicConnect.Application;
-using ClinicConnect.Application.Commands;
 using ClinicConnect.Application.DTOs;
 using ClinicConnect.Domain.Entites;
-using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ClinicConnect.Web.API.Controllers
@@ -33,7 +30,8 @@ namespace ClinicConnect.Web.API.Controllers
         [HttpGet]
         public async Task<IActionResult> GetAllDoctors()
         {
-            return Ok(new Doctor("name", "email", "phone", "specialization"));
+            var doctors = await _doctorService.GetAll();
+            return Ok(doctors);
         }
     }
 }

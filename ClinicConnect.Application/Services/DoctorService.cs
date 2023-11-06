@@ -1,6 +1,7 @@
 using AutoMapper;
 using ClinicConnect.Application.Commands;
 using ClinicConnect.Application.DTOs;
+using ClinicConnect.Application.Queries;
 using ClinicConnect.Domain.Entites;
 using MediatR;
 
@@ -24,9 +25,11 @@ namespace ClinicConnect.Application.Services
             return doctor;
         }
 
-        public Task<IEnumerable<DoctorDTO>> GetAll()
+        public async Task<IEnumerable<DoctorDTO>> GetAll()
         {
-            throw new NotImplementedException();
+            var query = new GetAllDoctorsQuery();
+            var result = await _mediator.Send(query);
+            return _mapper.Map<IEnumerable<DoctorDTO>>(result);
         }
     }
 }
