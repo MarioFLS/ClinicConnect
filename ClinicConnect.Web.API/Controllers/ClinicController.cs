@@ -9,7 +9,6 @@ namespace ClinicConnect.Web.API.Controllers
     public class ClinicController : ControllerBase
     {
         private readonly IClinicService _clinicService;
-
         public ClinicController(IClinicService clinicService)
         {
             _clinicService = clinicService;
@@ -23,6 +22,13 @@ namespace ClinicConnect.Web.API.Controllers
                 return BadRequest("O Body não pode ser nulo");
             }
             var result = await _clinicService.Add(clinic);
+            return Ok(result);
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> GetAllClinics()
+        {
+            var result = await _clinicService.GetAll();
             return Ok(result);
         }
     }

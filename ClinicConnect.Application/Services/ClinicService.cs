@@ -2,6 +2,7 @@ using AutoMapper;
 using ClinicConnect.Application.Commands.ClinicCommand;
 using ClinicConnect.Application.DTOs;
 using ClinicConnect.Application.Interfaces;
+using ClinicConnect.Application.Queries;
 using MediatR;
 
 namespace ClinicConnect.Application.Services
@@ -24,9 +25,11 @@ namespace ClinicConnect.Application.Services
             return clinic;
         }
 
-        public Task<IEnumerable<ClinicDTO>> GetAll()
+        public async Task<IEnumerable<ClinicDTO>> GetAll()
         {
-            throw new NotImplementedException();
+            var query = new GetAllClinicsQuery();
+            var result = await _mediator.Send(query);
+            return _mapper.Map<IEnumerable<ClinicDTO>>(result);
         }
     }
 }

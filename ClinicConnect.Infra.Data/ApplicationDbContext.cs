@@ -7,7 +7,9 @@ namespace ClinicConnect.Infra.Data
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {
-
+            Doctors = Set<Doctor>();
+            Patients = Set<Patient>();
+            Clinics = Set<Clinic>();
         }
 
         public DbSet<Doctor> Doctors { get; set; }

@@ -3,7 +3,7 @@ using MediatR;
 
 namespace ClinicConnect.Application.Queries
 {
-    public class GetAllDoctorsQuery : IRequest<IEnumerable<Doctor>>
+    public class GetAllClinicsQuery : IRequest<IEnumerable<Clinic>>
     {
     }
 }
