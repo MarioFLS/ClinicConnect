@@ -32,5 +32,16 @@ namespace ClinicConnect.Web.API.Controllers
             var doctors = await _doctorService.GetAll();
             return Ok(doctors);
         }
+
+        [HttpPost("associate")]
+        public async Task<IActionResult> AssociateDoctorClinic([FromBody] DoctorClinicAssociationDTO association)
+        {
+            if (association is null)
+            {
+                return BadRequest("O Body não pode ser nulo");
+            }
+            var id = await _doctorService.AssociateDoctorClinic(association);
+            return Ok(id);
+        }
     }
 }

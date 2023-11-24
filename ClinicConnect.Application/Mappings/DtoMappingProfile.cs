@@ -10,6 +10,7 @@ namespace ClinicConnect.Application.Mappings
         {
             CreateMap<Doctor, DoctorDTO>();
             CreateMap<Clinic, ClinicDTO>();
+            CreateMap<DoctorClinicAssociation, DoctorClinicAssociationDTO>();
         }
     }
 }

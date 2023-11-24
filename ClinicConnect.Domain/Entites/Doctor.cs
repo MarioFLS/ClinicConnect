@@ -7,6 +7,8 @@ namespace ClinicConnect.Domain.Entites
         public string Phone { get; private set; }
         public string Specialization { get; private set; }
 
+        public List<DoctorClinicAssociation> DoctorClinicAssociation { get; set; } = new List<DoctorClinicAssociation>();
+
         public Doctor(string name, string email, string phone, string specialization)
         {
             Name = name;

@@ -1,4 +1,5 @@
 using ClinicConnect.Application.DTOs;
+using ClinicConnect.Domain.Entites;
 
 namespace ClinicConnect.Application
 {
@@ -6,5 +7,6 @@ namespace ClinicConnect.Application
     {
         Task<DoctorDTO> Add(DoctorDTO doctor);
         Task<IEnumerable<DoctorDTO>> GetAll();
+        Task<DoctorClinicAssociation> AssociateDoctorClinic(DoctorClinicAssociationDTO association);
     }
 }

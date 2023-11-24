@@ -10,11 +10,14 @@ namespace ClinicConnect.Infra.Data
             Doctors = Set<Doctor>();
             Patients = Set<Patient>();
             Clinics = Set<Clinic>();
+            DoctorClinicAssociations = Set<DoctorClinicAssociation>();
         }
 
         public DbSet<Doctor> Doctors { get; set; }
         public DbSet<Patient> Patients { get; set; }
         public DbSet<Clinic> Clinics { get; set; }
+
+        public DbSet<DoctorClinicAssociation> DoctorClinicAssociations { get; set; }
 
 
         protected override void OnModelCreating(ModelBuilder builder)

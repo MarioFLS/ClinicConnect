@@ -13,6 +13,14 @@ namespace ClinicConnect.Infra.Data.Repository
             _context = context;
         }
 
+        public async Task<DoctorClinicAssociation> AssociateDoctorClinic(DoctorClinicAssociation association)
+        {
+            await _context.DoctorClinicAssociations.AddAsync(association);
+            await _context.SaveChangesAsync();
+
+            return association;
+        }
+
         public async Task<Doctor> CreateAsync(Doctor doctor)
         {
             await _context.Doctors.AddAsync(doctor);

@@ -1,6 +1,7 @@
 using AutoMapper;
 using ClinicConnect.Application.Commands;
 using ClinicConnect.Application.Commands.ClinicCommand;
+using ClinicConnect.Application.Commands.DoctorCommand;
 using ClinicConnect.Application.DTOs;
 
 namespace ClinicConnect.Application.Mappings
@@ -11,6 +12,7 @@ namespace ClinicConnect.Application.Mappings
         {
             CreateMap<DoctorDTO, CreateDoctorCommand>();
             CreateMap<ClinicDTO, CreateClinicCommand>();
+            CreateMap<DoctorClinicAssociationDTO, AssociateDoctorClinicCommand>();
         }
     }
 }

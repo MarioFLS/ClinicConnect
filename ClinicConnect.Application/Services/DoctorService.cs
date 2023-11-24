@@ -1,5 +1,6 @@
 using AutoMapper;
 using ClinicConnect.Application.Commands;
+using ClinicConnect.Application.Commands.DoctorCommand;
 using ClinicConnect.Application.DTOs;
 using ClinicConnect.Application.Queries;
 using ClinicConnect.Domain.Entites;
@@ -23,6 +24,12 @@ namespace ClinicConnect.Application.Services
             var command = _mapper.Map<CreateDoctorCommand>(doctor);
             await _mediator.Send(command);
             return doctor;
+        }
+
+        public async Task<DoctorClinicAssociation> AssociateDoctorClinic(DoctorClinicAssociationDTO association)
+        {
+            var command = _mapper.Map<AssociateDoctorClinicCommand>(association);
+            return await _mediator.Send(command);
         }
 
         public async Task<IEnumerable<DoctorDTO>> GetAll()
